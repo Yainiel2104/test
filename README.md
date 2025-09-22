@@ -6,9 +6,9 @@
 
 *Tegnologías utilizadas:*
     -> Frontend:
-        - Framework Angular en su versión 20.
-        - Biblioteca Sweetalert2 para sistema de alertas.
-        - Lenguage de programación TypeScript en su versión 5.9.2.
+        - Framework Angular en su versión 20
+        - Biblioteca Sweetalert2 para sistema de alertas
+        - Lenguage de programación TypeScript en su versión 5.9.2
 
     -> Backend:
         - Node.js versión 22.19.0
