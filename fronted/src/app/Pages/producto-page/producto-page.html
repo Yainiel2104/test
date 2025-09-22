@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<main class="main-content">
+    @if (productoService.loading) {
+    <app-loader></app-loader>
+    }
+    @if (!productoService.loading) {
+    <div class="product-container">
+        <div class="product-grid">
+            <!-- Galería de imágenes -->
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <img [src]="producto.img"
+                        alt="Producto principal" class="product-image">
+                </div>
+            </div>
+            <!-- Información del producto -->
+            <div class="product-info">
+                <h1 class="product-title">{{producto.nombre}}</h1>
+                <div class="product-brand">Marca: <a href="#">Empresa Premium</a></div>
+
+                <div class="rating-container">
+                    <div class="rating-stars">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star_half</span>
+                    </div>
+                    <span class="rating-count">(128 valoraciones)</span>
+                </div>
+
+                <div class="price-container">
+                    <span class="current-price">R${{producto.precio}}</span>
+                </div>
+
+                <div class="promo-banner">
+                    <span class="material-icons">local_offer</span>
+                    <div>
+                        <strong>Oferta especial:</strong> Envío gratis en pedidos superiores a $50.
+                        ¡Solo por tiempo limitado!
+                    </div>
+                </div>
+
+                <p class="product-description">
+                    {{producto.descripcion}}
+                </p>
+
+                <ul class="features-list">
+                    <li><span class="material-icons">check_circle</span> Característica premium 1 con gran beneficio
+                    </li>
+                    <li><span class="material-icons">check_circle</span> Característica exclusiva 2 que lo diferencia
+                    </li>
+                    <li><span class="material-icons">check_circle</span> Beneficio importante 3 para el usuario</li>
+                    <li><span class="material-icons">check_circle</span> Ventaja competitiva 4 única en el mercado</li>
+                </ul>
+
+                <div class="stock-info">
+                    <span class="material-icons">inventory_2</span>
+                    <strong>Disponibilidad:</strong> En stock (solo {{producto.stock}} unidades)
+                </div>
+
+                <div class="action-buttons">
+                    <button class="buy-now-btn mat-raised-button mat-primary pulse">COMPRAR AHORA</button>
+                    <button class="cart-btn mat-button" style="border: 1px solid #ccc;">
+                        <span class="material-icons" style="vertical-align: middle;">add_shopping_cart</span>
+                        Añadir al carrito
+                    </button>
+                </div>
+
+                <div class="promo-banner">
+                    <span class="material-icons">local_shipping</span>
+                    <div>
+                        <strong>Envío rápido:</strong> Recíbelo en 24-48 horas. Devolución gratis en 30 días.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de detalles adicionales -->
+        <div class="details-section" style="padding: 0 24px 24px;">
+            <h2>Detalles del producto</h2>
+            <div class="details-tabs">
+                <p>Información detallada sobre especificaciones, materiales, cuidados, etc. Incluye:</p>
+                <ul class="features-list">
+                    <li><span class="material-icons">done</span> Especificación técnica 1</li>
+                    <li><span class="material-icons">done</span> Especificación técnica 2</li>
+                    <li><span class="material-icons">done</span> Dimensiones y peso</li>
+                    <li><span class="material-icons">done</span> Instrucciones de uso y mantenimiento</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    }
+</main>
+
+<app-footer></app-footer>

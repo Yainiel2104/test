@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<main class="main-content">
+    @if (productosService.loading) {
+        <app-loader></app-loader>
+    }
+    @if (!productosService.loading) {
+        @for (producto of productos; track producto.id) {
+            <app-card-prod [product]="producto"></app-card-prod>
+        }
+    }
+</main>
+<router-outlet />
+<app-footer></app-footer>
