@@ -204,11 +204,11 @@ _Instrucciones de Setup y ejecución en caso de no funcionar Docker o Terraform_
             - cd mi-proyecto
 
         2.Instalar dependencias fronted
-            - cd fronted
+            - cd test/fronted
             - npm install
 
         3.Instalar dependencias server
-            - cd server
+            - cd test/server
             - npm install
 
         4.Iniciar servidores
