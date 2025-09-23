@@ -17,6 +17,10 @@ export class CardProd {
     stock: 0,
     img: '',
   };
+  
+  isFavorito:boolean=false;
+
+  toggleFavorito():void {this.isFavorito=!this.isFavorito;}
 
   truncateDescription(description: string): string {
     const maxLength = 250;

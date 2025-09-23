@@ -109,7 +109,10 @@
     background: white;
     transform: scale(1.1);
 }
-
+.wishlist-button.active{
+    color: #333;
+    background: #e91e63;
+}
 .image-container:hover img {
     transform: scale(1.05);
 }

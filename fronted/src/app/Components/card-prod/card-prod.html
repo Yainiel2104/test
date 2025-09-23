@@ -12,7 +12,7 @@
       <img src="/error_img.jpg" alt="Imagen no disponible">
     }
     <div class="image-overlay">
-      <button class="wishlist-button" aria-label="Añadir a favoritos">
+      <button class="wishlist-button" [class.active]="isFavorito" (click)="toggleFavorito()" aria-label="Añadir a favoritos">
         <span class="material-icons">favorite_border</span>
       </button>
       <button class="view-button" aria-label="Vista rápida">
