@@ -21,13 +21,19 @@ _Tegnologías utilizadas:_
 
     -> Base de datos:
         - PostgreSQL en Render (remota)
-        *Sé que el test exijía Mongo o MySQL pero debido al bajo rendimiento de la máquina en la que se desarrolló la aplicación la mejor solución para ahorro de recursos fue utilizar una base de datos externa, por lo cual, utilicé servidor de render que utilizo usualmente pero exclusivamente PostgreSQL.*
+
+        _IMPORTANTE OJO_
+
+            -Sé que el test exijía Mongo o MySQL pero debido al bajo rendimiento de la máquina en la que se desarrolló la aplicación la mejor solución para ahorro de recursos fue utilizar una base de datos externa, por lo cual, utilicé servidor de render que utilizo usualmente pero exclusivamente PostgreSQL.
 
 _Instrucciones de Setup y ejecución_
+
 -> 🚀Ejecución Rápida con Docker Compose:
-**Prerrequisitos** 
-- Docker instalado. 
-- Docker Compose instalado.
+
+    _Prerrequisitos_ 
+        - Docker instalado. 
+        - Docker Compose instalado.
+        
 **Pasos para ejecutar**
 1.Clonar el repositorio
 ```bash - git clone <url-del-repositorio> - cd mi-proyecto
