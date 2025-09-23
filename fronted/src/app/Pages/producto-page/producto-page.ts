@@ -21,10 +21,10 @@ export class ProductoPage implements OnInit {
     stock: 0,
     img: '',
   };
-  // producto: ProductoInterface[] = [];
+
   constructor(
     public productoService: ProductosServices,
-    private route: ActivatedRoute // Inyecta ActivatedRoute
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -35,7 +35,6 @@ export class ProductoPage implements OnInit {
   }
 
   cargarProducto(id: string) {
-    // Usa tu servicio para cargar el producto
     this.productoService
       .getProductoById(id)
       .pipe(
@@ -46,16 +45,5 @@ export class ProductoPage implements OnInit {
           }
         })
       ).subscribe();
-
-    // .subscribe(
-    //   (data) => {
-    //     // console.log(data.data);
-    //     this.producto = data.data;
-    //     console.log(this.producto);
-    //   },
-    //   (error) => {
-    //     console.error('Error al cargar producto:', error);
-    //   }
-    // );
   }
 }

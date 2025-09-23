@@ -6,18 +6,15 @@
     @if (!productoService.loading) {
     <div class="product-container">
         <div class="product-grid">
-            <!-- Galería de imágenes -->
             <div class="product-gallery">
                 <div class="main-image-container">
                     <img [src]="producto.img"
                         alt="Producto principal" class="product-image">
                 </div>
             </div>
-            <!-- Información del producto -->
             <div class="product-info">
                 <h1 class="product-title">{{producto.nombre}}</h1>
                 <div class="product-brand">Marca: <a href="#">Empresa Premium</a></div>
-
                 <div class="rating-container">
                     <div class="rating-stars">
                         <span class="material-icons">star</span>
@@ -76,7 +73,6 @@
             </div>
         </div>
 
-        <!-- Sección de detalles adicionales -->
         <div class="details-section" style="padding: 0 24px 24px;">
             <h2>Detalles del producto</h2>
             <div class="details-tabs">

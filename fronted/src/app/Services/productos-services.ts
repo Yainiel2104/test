@@ -27,7 +27,6 @@ export interface ApiObjectResponse {
 export class ProductosServices {
   private productsSubject = new BehaviorSubject<ProductoInterface[]>([]);
   public productos = this.productsSubject.asObservable();
-  // private productos: ProductoInterface[] = [];
   public loading = true;
 
   constructor(private http: HttpClient,private router: Router) {}
@@ -38,9 +37,8 @@ export class ProductosServices {
     return this.http.get<ApiArrayResponse>(apiUrl).pipe(
       tap({
         next: (productos) => {
-          // this.productos = productos.data;
           this.productsSubject.next(productos.data);
-          this.loading = false; // Desactiva loading al tener éxito
+          this.loading = false;
         },
         error: (error) => {
           console.error('Error fetching products', error);
@@ -51,7 +49,7 @@ export class ProductosServices {
               'Error al obtener el producto,inténtelo nuevamente. Si persiste el problema contacte con soporte.',
             icon: error.status == 404 ? 'warning' : 'error',
           });
-          this.loading = false; // Desactiva loading en caso de error
+          this.loading = false;
         },
       })
     );

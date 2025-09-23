@@ -20,10 +20,8 @@ export class HomePage {
   constructor(public productosService: ProductosServices) {}
 
   ngOnInit() {
-    //llamo al metodo que obtiene los productos
     this.productosService.fetchProductos().subscribe();
     
-    //Habilitar la deteccion de cambios en productos
     this.productosService.productos.subscribe({
       next: (products) => {
         this.productos = products;

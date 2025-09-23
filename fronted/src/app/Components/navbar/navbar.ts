@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  // standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
@@ -33,7 +32,6 @@ export class Navbar {
       query: ['', Validators.required],
     });
 
-    // Detectar cambios en el tamaño de pantalla:cite[3]:cite[7]
     this.breakpointObserver
       .observe([Breakpoints.Handset, Breakpoints.TabletPortrait])
       .subscribe((result) => {
