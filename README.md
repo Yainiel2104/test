@@ -1,6 +1,7 @@
 # Mi Proyecto Full-Stack
 
 _Descripción del Projecto:_
+
 El proyecto muestra un catálogo de productos puestos en venta donde incluye dos vistas; una en la que se muestra una card por producto con una descripción del producto y una imagen del mismo, en el header tiene un panel de opciones donde puede filtrar por busqueda específica según el término y ordenarlos por alguna propiedad del producto o limitar la cantidad de productos a mostrar. En la segunda vista sale información detallada de un producto en específico que le interese al cliente, en la cual se busca llamar aún más su atención.
 
 _Tegnologías utilizadas:_
@@ -92,6 +93,7 @@ _Endpoints de la API:_
                     },
                 ]
             }
+
             *Status 500:
             {
                 "data": "Error al obtener el producto,inténtelo nuevamente. Si persiste el problema contacte con soporte."
@@ -124,8 +126,8 @@ _Endpoints de la API:_
                 {
                     "data": "No hay coincidencias, intente con otro término."
                 }
-    -> http://localhost:3000/api/productos/:id
 
+    -> http://localhost:3000/api/productos/:id
         - En este endpoint que recibe por el id de un producto específico y lo retorna en caso de existir en la base de datos.
 
         - Ejemplo de respuesta:
@@ -159,7 +161,9 @@ _Endpoints de la API:_
                 }
 
 _Desiciones de Diseño_
--> Angular: - Se seleccionó Angular específicamente para cumplir con los requisitos técnicos del test, que explicitaban el uso de Angular Router y HttpClient. Aunque mi stack principal es React+Vite, prioricé la adherencia a los requerimientos sobre la familiaridad tecnológica, demostrando adaptabilidad. Angular ofrece una solución integrada y cohesiva para routing y HTTP client, reduciendo la dependencia de librerías externas y garantizando compatibilidad total.
+
+    -> Angular: 
+        - Se seleccionó Angular específicamente para cumplir con los requisitos técnicos del test, que explicitaban el uso de Angular Router y HttpClient. Aunque mi stack principal es React+Vite, prioricé la adherencia a los requerimientos sobre la familiaridad tecnológica, demostrando adaptabilidad. Angular ofrece una solución integrada y cohesiva para routing y HTTP client, reduciendo la dependencia de librerías externas y garantizando compatibilidad total.
 
         - Se implementó una estructura modular basada en Componentes, Pages y Services, adecuada para la escala del proyecto. Dado que la aplicación es estática y no contempla crecimiento futuro, se evitó una arquitectura más compleja (como domain-driven design o feature-based structure) para optimizar la simplicidad y tiempo de desarrollo. El layout unificado se gestiona desde el componente raíz, eliminando la necesidad de una carpeta de Layouts dedicada.
 
@@ -184,5 +188,6 @@ _Desiciones de Diseño_
             *Esto garantiza robustez en la capa de datos despite la simplicidad del proyecto.
     
 
-*IMPORTANTE OJO*
+_IMPORTANTE OJO_
+
     La computadora en la que se realizó este test no cumple con los requisitos mínimos para utilizar Docker por lo que el código generado para el despliegue no ha sido testeado ni probado. Espero su comprensión y muchas gracias por darme la oportunidad de formar parte del equipo.
