@@ -29,13 +29,11 @@ _Instrucciones de Setup y ejecución_
 
     -> 🚀Ejecución Rápida con Docker Compose:
 
-        **Prerrequisitos**
-
+        *Prerrequisitos
             - Docker instalado. 
             - Docker Compose instalado.
 
-        **Pasos para ejecutar**
-
+        *Pasos para ejecutar
             1.Clonar el repositorio
                 - git clone <url-del-repositorio> - cd mi-proyecto
 
@@ -51,13 +49,11 @@ _Instrucciones de Setup y ejecución_
 
     -> 🚀Terraform:
 
-        **Prerrequisitos**
-
+        **Prerrequisitos
             - Terraform instalado
             - Docker instalado
 
-        **Pasos para ejecutar:**
-
+        *Pasos para ejecutar:
             1.Clonar el repositorio
                 - git clone <url-del-repositorio>
                 - cd mi-proyecto
