@@ -1,0 +1,257 @@
+.main-content {
+    padding: 2rem;
+    min-height: calc(100vh - 343px);
+    /* Ajusta según la altura del navbar y footer */
+    /* background-color: #f5f5f5; */
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+:root {
+    --primary-color: #3f51b5;
+    --accent-color: #ff4081;
+    --warn-color: #f44336;
+    --light-bg: #f5f5f5;
+    --dark-text: #333;
+    --light-text: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Image Gallery */
+.product-gallery {
+    padding: 24px;
+}
+
+.main-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: block;
+}
+
+.product-image:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
+    border-color: var(--primary-color);
+}
+
+/* Product Info */
+.product-info {
+    padding: 24px;
+    padding-right: 32px;
+}
+
+.product-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--dark-text);
+}
+
+.product-brand {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.rating-stars {
+    color: #ffc107;
+    margin-right: 8px;
+}
+
+.rating-count {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.price-container {
+    margin: 24px 0;
+}
+
+.current-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+}
+
+.discount-badge {
+    background-color: var(--warn-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-left: 12px;
+}
+
+.product-description {
+    margin: 24px 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Features */
+.features-list {
+    list-style: none;
+    margin: 16px 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.features-list .material-icons {
+    color: #4caf50;
+    margin-right: 8px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    margin: 32px 0;
+}
+
+.buy-now-btn {
+    flex: 2;
+    height: 48px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.cart-btn {
+    flex: 1;
+    height: 48px;
+    border-radius: 24px;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background: linear-gradient(to right, #4caf50, #8bc34a);
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    box-shadow: var(--shadow);
+}
+
+.promo-banner .material-icons {
+    margin-right: 12px;
+    font-size: 2rem;
+}
+
+/* Details Tabs */
+.details-section {
+    margin: 32px 0;
+}
+
+.details-tabs {
+    margin-top: 24px;
+}
+
+/* Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Stock info */
+.stock-info {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    color: #4caf50;
+    font-weight: 500;
+}
+
+.stock-info .material-icons {
+    margin-right: 8px;
+}
+
+.low-stock {
+    color: var(--warn-color);
+}

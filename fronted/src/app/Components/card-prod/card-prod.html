@@ -1,0 +1,50 @@
+<div class="product-card" [class.out-of-stock]="product.stock === 0">
+  <div class="card-badges">
+    <span class="stock-badge" [class.low-stock]="product.stock > 0 && product.stock < 10">
+      {{ product.stock === 0 ? 'Agotado' : (product.stock < 10 ? 'Pocas unidades' : 'En stock') }}
+    </span>
+  </div>
+  
+  <div class="image-container">
+    @if(product.img){
+      <img [src]="product.img" [alt]="product.nombre" (error)="handleImageError($event)" >
+    } @else {
+      <img src="/error_img.jpg" alt="Imagen no disponible">
+    }
+    <div class="image-overlay">
+      <button class="wishlist-button" aria-label="Añadir a favoritos">
+        <span class="material-icons">favorite_border</span>
+      </button>
+      <button class="view-button" aria-label="Vista rápida">
+        <span class="material-icons" routerLink="/producto/{{ product.id }}">visibility</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="card-content">
+    <h3 class="product-name">{{ product.nombre }}</h3>
+    
+    <p class="product-description">{{ truncateDescription(product.descripcion) }}</p>
+    
+    <div class="price-section">
+      <span class="original-price">R${{ product.precio}}</span>
+    </div>
+    
+    <div class="stock-section">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width]="getStockPercentage() + '%'" [class]="getStockColor()"></div>
+      </div>
+      <span class="stock-text">{{ product.stock }} disponibles</span>
+    </div>
+  </div>
+  
+  <div class="card-actions">
+    <button class="add-to-cart-btn" [disabled]="product.stock === 0">
+      <span class="material-icons">add_shopping_cart</span>
+      Añadir al carrito
+    </button>
+    <button class="details-btn" aria-label="Ver detalles">
+      <span class="material-icons">more_vert</span>
+    </button>
+  </div>
+</div>

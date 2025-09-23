@@ -1,0 +1,136 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <button class="menu-button">
+        <span class="material-icons">menu</span>
+      </button>
+      <span class="logo" routerLink="/">MiTienda</span>
+    </div>
+
+    <form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+      <div class="search-fields">
+        <div class="select-container">
+          <select formControlName="field" class="search-select">
+            <option value="nombre">Nombre</option>
+            <option value="descripcion">Descripción</option>
+            <option value="precio">Precio</option>
+            <option value="stock">Stock</option>
+          </select>
+        </div>
+
+        <div class="input-container">
+          <input type="text" formControlName="query" placeholder="¿Qué estás buscando?" class="search-input">
+          <button type="submit" class="search-button" [disabled]="!searchForm.valid">
+            <span class="material-icons">search</span>
+          </button>
+        </div>
+      </div>
+      @if(isSearching){
+      <div>
+        <button type="button" (click)="onClearSearch()" class="action-button">Limpiar</button>
+      </div>
+      }
+      <div class="action-buttons">
+        @if(!isRoot){
+        <button type="button" (click)="goBack()" class="action-button" title="Atrás">
+          <span class="material-icons">arrow_back</span>
+        </button>
+        }
+
+        <button type="button" class="filter-button" (click)="menuOpen = !menuOpen">
+          <span class="material-icons">filter_list</span>
+          Filtros
+        </button>
+      </div>
+    </form>
+
+    <div class="filter-menu {{menuOpen ? 'active' : ''}}">
+      <div class="menu-header">
+        <h3>Opciones de Filtrado</h3>
+        <button class="close-button">
+          <span class="material-icons" (click)="menuOpen = !menuOpen">close</span>
+        </button>
+      </div>
+      <div class="menu-content">
+        <div class="menu-section">
+          <h4>Ordenar por</h4>
+          <button (click)="setSort('nombre')" class="menu-button {{sort === 'nombre' ? 'active' : ''}}">
+            <span class="material-icons">sort_by_alpha</span>
+            <span>Nombre</span>
+          </button>
+          <button (click)="setSort('descripcion')" class="menu-button {{sort === 'descripcion' ? 'active' : ''}}">
+            <span class="material-icons">sort_by_alpha</span>
+            <span>Descripcion</span>
+          </button>
+          <button (click)="setSort('precio')" class="menu-button {{sort === 'precio' ? 'active' : ''}}">
+            <span class="material-icons">attach_money</span>
+            <span>Precio</span>
+          </button>
+          <button (click)="setSort('stock')" class="menu-button {{sort === 'stock' ? 'active' : ''}}">
+            <span class="material-icons">attach_money</span>
+            <span>Stock</span>
+          </button>
+        </div>
+
+        <div class="menu-section">
+          <h4>Dirección</h4>
+          <button (click)="setOrder('asc')" class="menu-button {{orden === 'asc' ? 'active' : ''}}">
+            <span class="material-icons">arrow_upward</span>
+            <span>Ascendente</span>
+          </button>
+          <button (click)="setOrder('desc')" class="menu-button {{orden === 'desc' ? 'active' : ''}}">
+            <span class="material-icons">arrow_downward</span>
+            <span>Descendente</span>
+          </button>
+        </div>
+
+        <div class="menu-section">
+          <h4>Límite de resultados</h4>
+          <button (click)="setLimit('1')" class="menu-button {{limit == '1' ? 'active' : ''}}">1 items</button>
+          <button (click)="setLimit('3')" class="menu-button {{limit == '3' ? 'active' : ''}}">3 items</button>
+          <button (click)="setLimit('todos')" class="menu-button {{limit == 'todos' ? 'active' : ''}}">Todos</button>
+        </div>
+
+      </div>
+
+      <button class="apply-button" (click)="filtrar()">Aplicar</button>
+    </div>
+  </div>
+
+  <!-- <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <h3>Opciones de Filtrado</h3>
+        <button class="close-button">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+
+      <div class="mobile-menu-section">
+        <label>Ordenar por</label>
+        <select (change)="setSort($event)">
+          <option value="nombre">Nombre</option>
+          <option value="precio">Precio</option>
+        </select>
+      </div>
+
+      <div class="mobile-menu-section">
+        <label>Dirección</label>
+        <select (change)="setOrder($event)">
+          <option value="asc">Ascendente</option>
+          <option value="desc">Descendente</option>
+        </select>
+      </div>
+
+      <div class="mobile-menu-section">
+        <label>Límite</label>
+        <select (change)="setLimit($event)">
+          <option value="10">10 items</option>
+          <option value="20">20 items</option>
+          <option value="50">50 items</option>
+        </select>
+      </div>
+    </div>
+  </div> -->
+</nav>
