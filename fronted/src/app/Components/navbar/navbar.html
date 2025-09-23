@@ -44,7 +44,7 @@
       </div>
     </form>
 
-    <div class="filter-menu {{menuOpen ? 'active' : ''}}">
+    <div class="filter-menu" [class.active]="menuOpen ? 'active' : ''">
       <div class="menu-header">
         <h3>Opciones de Filtrado</h3>
         <button class="close-button">
@@ -54,19 +54,19 @@
       <div class="menu-content">
         <div class="menu-section">
           <h4>Ordenar por</h4>
-          <button (click)="setSort('nombre')" class="menu-button {{sort === 'nombre' ? 'active' : ''}}">
+          <button (click)="setSort('nombre')" class="menu-button" [class.active]="sort === 'nombre' ? 'active' : ''">
             <span class="material-icons">sort_by_alpha</span>
             <span>Nombre</span>
           </button>
-          <button (click)="setSort('descripcion')" class="menu-button {{sort === 'descripcion' ? 'active' : ''}}">
+          <button (click)="setSort('descripcion')" class="menu-button" [class.active]="sort === 'descripcion' ? 'active' : ''">
             <span class="material-icons">sort_by_alpha</span>
             <span>Descripcion</span>
           </button>
-          <button (click)="setSort('precio')" class="menu-button {{sort === 'precio' ? 'active' : ''}}">
+          <button (click)="setSort('precio')" class="menu-button" [class.active]="sort === 'precio' ? 'active' : ''">
             <span class="material-icons">attach_money</span>
             <span>Precio</span>
           </button>
-          <button (click)="setSort('stock')" class="menu-button {{sort === 'stock' ? 'active' : ''}}">
+          <button (click)="setSort('stock')" class="menu-button" [class.active]="sort === 'stock' ? 'active' : ''">
             <span class="material-icons">attach_money</span>
             <span>Stock</span>
           </button>
@@ -74,11 +74,11 @@
 
         <div class="menu-section">
           <h4>Dirección</h4>
-          <button (click)="setOrder('asc')" class="menu-button {{orden === 'asc' ? 'active' : ''}}">
+          <button (click)="setOrder('asc')" class="menu-button" [class.active]="orden === 'asc' ? 'active' : ''">
             <span class="material-icons">arrow_upward</span>
             <span>Ascendente</span>
           </button>
-          <button (click)="setOrder('desc')" class="menu-button {{orden === 'desc' ? 'active' : ''}}">
+          <button (click)="setOrder('desc')" class="menu-button" [class.active]="orden === 'desc' ? 'active' : ''">
             <span class="material-icons">arrow_downward</span>
             <span>Descendente</span>
           </button>
@@ -86,9 +86,9 @@
 
         <div class="menu-section">
           <h4>Límite de resultados</h4>
-          <button (click)="setLimit('1')" class="menu-button {{limit == '1' ? 'active' : ''}}">1 items</button>
-          <button (click)="setLimit('3')" class="menu-button {{limit == '3' ? 'active' : ''}}">3 items</button>
-          <button (click)="setLimit('todos')" class="menu-button {{limit == 'todos' ? 'active' : ''}}">Todos</button>
+          <button (click)="setLimit('1')" class="menu-button" [class.active]="limit === '1' ? 'active' : ''">1 items</button>
+          <button (click)="setLimit('3')" class="menu-button" [class.active]="limit === '3' ? 'active' : ''">3 items</button>
+          <button (click)="setLimit('todos')" class="menu-button" [class.active]="limit === 'todos' ? 'active' : ''">Todos</button>
         </div>
 
       </div>
