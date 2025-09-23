@@ -5,7 +5,8 @@ El proyecto muestra un catálogo de productos puestos en venta donde incluye dos
 
 _Tegnologías utilizadas:_
 
-    -> Frontend: 
+*Tegnologías utilizadas:*
+    -> Frontend:
         - Framework Angular en su versión 20
         - Biblioteca Sweetalert2 para sistema de alertas
         - Lenguage de programación TypeScript en su versión 5.9.2
@@ -177,6 +178,7 @@ _Desiciones de Diseño_
             *Soporte para transacciones.
             *Compatibilidad con múltiples dialectos SQL.
             *Esto garantiza robustez en la capa de datos despite la simplicidad del proyecto.
+    
 
-_IMPORTANTE OJO_
-La computadora en la que se realizó este test no cumple con los requisitos mínimos para utilizar Docker por lo que el código generado para el despliegue no ha sido testeado ni probado. Espero su comprensión y muchas gracias por darme la oportunidad de formar parte del equipo.
+*IMPORTANTE OJO*
+    La computadora en la que se realizó este test no cumple con los requisitos mínimos para utilizar Docker por lo que el código generado para el despliegue no ha sido testeado ni probado. Espero su comprensión y muchas gracias por darme la oportunidad de formar parte del equipo.
