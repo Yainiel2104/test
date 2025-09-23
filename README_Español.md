@@ -192,3 +192,27 @@ _Desiciones de Diseño_
 _IMPORTANTE OJO_
 
     La computadora en la que se realizó este test no cumple con los requisitos mínimos para utilizar Docker por lo que el código generado para el despliegue no ha sido testeado ni probado. Espero su comprensión y muchas gracias por darme la oportunidad de formar parte del equipo.
+
+_Instrucciones de Setup y ejecución en caso de no funcionar Docker o Terraform_
+    
+    *Prerrequisitos:
+        - Node instalado version 22
+    
+    *Pasos para ejecutar
+        1.Clonar el repositorio
+            - git clone <url-del-repositorio> - cd mi-proyecto
+
+        2.Instalar dependencias fronted
+            - cd fronted
+            - npm install
+
+        3.Instalar dependencias server
+            - cd server
+            - npm install
+
+        4.Iniciar servidores
+            - npm start
+
+        5.Verificar que los servicios estén corriendo
+            - Frontend: http://localhost:4200
+            - Backend: http://localhost:3000
