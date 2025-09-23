@@ -24,6 +24,7 @@ _Tegnologías utilizadas:_
         - PostgreSQL en Render (remota)
 
 _IMPORTANTE OJO_
+
     -Sé que el test exijía Mongo o MySQL pero debido al bajo rendimiento de la máquina en la que se desarrolló la aplicación la mejor solución para ahorro de recursos fue utilizar una base de datos externa, por lo cual, utilicé servidor de render que utilizo usualmente pero exclusivamente PostgreSQL.
 
 _Instrucciones de Setup y ejecución_
