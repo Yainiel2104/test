@@ -5,7 +5,6 @@ El proyecto muestra un catálogo de productos puestos en venta donde incluye dos
 
 _Tegnologías utilizadas:_
 
-*Tegnologías utilizadas:*
     -> Frontend:
         - Framework Angular en su versión 20
         - Biblioteca Sweetalert2 para sistema de alertas
