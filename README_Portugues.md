@@ -203,11 +203,11 @@ _Instruções de Setup e execução em caso de não funcionar Docker ou Terrafor
             - git clone <url-do-repositorio> - cd mi-proyecto
 
         2.Instalar dependências do frontend
-            - cd fronted
+            - cd test/fronted
             - npm install
 
         3.Instalar dependências do server
-            - cd server
+            - cd test/server
             - npm install
 
         4.Iniciar servidores

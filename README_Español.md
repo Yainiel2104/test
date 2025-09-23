@@ -200,14 +200,15 @@ _Instrucciones de Setup y ejecución en caso de no funcionar Docker o Terraform_
     
     *Pasos para ejecutar
         1.Clonar el repositorio
-            - git clone <url-del-repositorio> - cd mi-proyecto
+            - git clone <url-del-repositorio> 
+            - cd mi-proyecto
 
         2.Instalar dependencias fronted
-            - cd fronted
+            - cd test/fronted
             - npm install
 
         3.Instalar dependencias server
-            - cd server
+            - cd test/server
             - npm install
 
         4.Iniciar servidores
