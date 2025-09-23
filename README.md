@@ -22,21 +22,22 @@ _Tegnologías utilizadas:_
     -> Base de datos:
         - PostgreSQL en Render (remota)
 
-        _IMPORTANTE OJO_
-
-            -Sé que el test exijía Mongo o MySQL pero debido al bajo rendimiento de la máquina en la que se desarrolló la aplicación la mejor solución para ahorro de recursos fue utilizar una base de datos externa, por lo cual, utilicé servidor de render que utilizo usualmente pero exclusivamente PostgreSQL.
+_IMPORTANTE OJO_
+    -Sé que el test exijía Mongo o MySQL pero debido al bajo rendimiento de la máquina en la que se desarrolló la aplicación la mejor solución para ahorro de recursos fue utilizar una base de datos externa, por lo cual, utilicé servidor de render que utilizo usualmente pero exclusivamente PostgreSQL.
 
 _Instrucciones de Setup y ejecución_
 
--> 🚀Ejecución Rápida con Docker Compose:
+    -> 🚀Ejecución Rápida con Docker Compose:
 
-    _Prerrequisitos_ 
-        - Docker instalado. 
-        - Docker Compose instalado.
-        
-**Pasos para ejecutar**
-1.Clonar el repositorio
-```bash - git clone <url-del-repositorio> - cd mi-proyecto
+        **Prerrequisitos**
+
+            - Docker instalado. 
+            - Docker Compose instalado.
+
+        **Pasos para ejecutar**
+
+            1.Clonar el repositorio
+                - git clone <url-del-repositorio> - cd mi-proyecto
 
             2.Ejecutar con Docker Compose
                 - docker-compose up.
@@ -49,11 +50,14 @@ _Instrucciones de Setup y ejecución_
                 - docker-compose down
 
     -> 🚀Terraform:
+
         **Prerrequisitos**
+
             - Terraform instalado
             - Docker instalado
 
         **Pasos para ejecutar:**
+
             1.Clonar el repositorio
                 - git clone <url-del-repositorio>
                 - cd mi-proyecto
@@ -74,8 +78,8 @@ _Instrucciones de Setup y ejecución_
                 - terraform destroy
 
 _Endpoints de la API:_
--> http://localhost:3000/api/productos?sort=''&orden=''&limit=''
 
+    -> http://localhost:3000/api/productos?sort=''&orden=''&limit=''
         - Este endpoint es para obtener todos los productos y se emplea de manera opcional los filtros solicitados en el test de cantidad de productos, orden ascendente o descendente y la propiedad del producto por la que quieres ordenar.
 
         - Ejemplo de respuesta:
@@ -98,7 +102,6 @@ _Endpoints de la API:_
             }
 
     -> http://localhost:3000/api/productos/search?termino=''&value=''
-
         - En este endpoint se realiza una búsqueda de los productos que incluyen el value en el termino buscado. Ejemplo: termino='nombre' value='laptop' devuelve todos los productos que en la propiedad nombre contienen el valor laptop.
 
         - Ejemplo de respuesta:
