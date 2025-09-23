@@ -1,14 +1,14 @@
 # Mi Proyecto Full-Stack
 
-*Descripción del Projecto:*
-    El proyecto muestra un catálogo de productos puestos en venta donde incluye dos vistas; una en la que se muestra una card por producto con una descripción del producto y una imagen del mismo, en el header tiene un panel de opciones donde puede filtrar por busqueda específica según el término y ordenarlos por alguna propiedad del producto o limitar la cantidad de productos a mostrar. En la segunda vista sale información detallada de un producto en específico que le interese al cliente, en la cual se busca llamar aún más su atención.
+_Descripción del Projecto:_
+El proyecto muestra un catálogo de productos puestos en venta donde incluye dos vistas; una en la que se muestra una card por producto con una descripción del producto y una imagen del mismo, en el header tiene un panel de opciones donde puede filtrar por busqueda específica según el término y ordenarlos por alguna propiedad del producto o limitar la cantidad de productos a mostrar. En la segunda vista sale información detallada de un producto en específico que le interese al cliente, en la cual se busca llamar aún más su atención.
 
+_Tegnologías utilizadas:_
 
-*Tegnologías utilizadas:*
-    -> Frontend:
-        - Framework Angular en su versión 20.
-        - Biblioteca Sweetalert2 para sistema de alertas.
-        - Lenguage de programación TypeScript en su versión 5.9.2.
+    -> Frontend: 
+        - Framework Angular en su versión 20
+        - Biblioteca Sweetalert2 para sistema de alertas
+        - Lenguage de programación TypeScript en su versión 5.9.2
 
     -> Backend:
         - Node.js versión 22.19.0
@@ -19,20 +19,18 @@
         - cors versión 2.8.5
         - dotenv versión 17.2.2
 
-    -> Base de datos: 
-        - PostgreSQL en Render (remota) 
+    -> Base de datos:
+        - PostgreSQL en Render (remota)
         *Sé que el test exijía Mongo o MySQL pero debido al bajo rendimiento de la máquina en la que se desarrolló la aplicación la mejor solución para ahorro de recursos fue utilizar una base de datos externa, por lo cual, utilicé servidor de render que utilizo usualmente pero exclusivamente PostgreSQL.*
 
-*Instrucciones de Setup y ejecución*
-    -> 🚀Ejecución Rápida con Docker Compose:
-        **Prerrequisitos**
-            - Docker instalado.
-            - Docker Compose instalado.
-        **Pasos para ejecutar**
-            1.Clonar el repositorio
-                ```bash
-                - git clone <url-del-repositorio>
-                - cd mi-proyecto
+_Instrucciones de Setup y ejecución_
+-> 🚀Ejecución Rápida con Docker Compose:
+**Prerrequisitos** 
+- Docker instalado. 
+- Docker Compose instalado.
+**Pasos para ejecutar**
+1.Clonar el repositorio
+```bash - git clone <url-del-repositorio> - cd mi-proyecto
 
             2.Ejecutar con Docker Compose
                 - docker-compose up.
@@ -54,7 +52,7 @@
                 - git clone <url-del-repositorio>
                 - cd mi-proyecto
 
-            2.Inicializar Terraform: 
+            2.Inicializar Terraform:
                 - terraform init
 
             3.Verificar el plan de ejecución:
@@ -69,11 +67,11 @@
             6.Destruir los recursos (cuando termines):
                 - terraform destroy
 
-*Endpoints de la API:*
-    -> http://localhost:3000/api/productos?sort=''&orden=''&limit='' 
-        
+_Endpoints de la API:_
+-> http://localhost:3000/api/productos?sort=''&orden=''&limit=''
+
         - Este endpoint es para obtener todos los productos y se emplea de manera opcional los filtros solicitados en el test de cantidad de productos, orden ascendente o descendente y la propiedad del producto por la que quieres ordenar.
-        
+
         - Ejemplo de respuesta:
             *Status 200:
             {
@@ -155,10 +153,9 @@
                     "data": "ID de producto inválido."
                 }
 
-*Desiciones de Diseño*
-    -> Angular:
-        - Se seleccionó Angular específicamente para cumplir con los requisitos técnicos del test, que explicitaban el uso de Angular Router y HttpClient. Aunque mi stack principal es React+Vite, prioricé la adherencia a los requerimientos sobre la familiaridad tecnológica, demostrando adaptabilidad. Angular ofrece una solución integrada y cohesiva para routing y HTTP client, reduciendo la dependencia de librerías externas y garantizando compatibilidad total.
-        
+_Desiciones de Diseño_
+-> Angular: - Se seleccionó Angular específicamente para cumplir con los requisitos técnicos del test, que explicitaban el uso de Angular Router y HttpClient. Aunque mi stack principal es React+Vite, prioricé la adherencia a los requerimientos sobre la familiaridad tecnológica, demostrando adaptabilidad. Angular ofrece una solución integrada y cohesiva para routing y HTTP client, reduciendo la dependencia de librerías externas y garantizando compatibilidad total.
+
         - Se implementó una estructura modular basada en Componentes, Pages y Services, adecuada para la escala del proyecto. Dado que la aplicación es estática y no contempla crecimiento futuro, se evitó una arquitectura más compleja (como domain-driven design o feature-based structure) para optimizar la simplicidad y tiempo de desarrollo. El layout unificado se gestiona desde el componente raíz, eliminando la necesidad de una carpeta de Layouts dedicada.
 
         - Se integró Sweetalert2 como solución de UI/UX para notificaciones, priorizando time-to-market y experiencia de usuario. La biblioteca ofrece componentes preconstruidos, responsividad y manejo nativo de promesas, simplificando la gestión de estados de error y confirmaciones.
@@ -180,7 +177,6 @@
             *Soporte para transacciones.
             *Compatibilidad con múltiples dialectos SQL.
             *Esto garantiza robustez en la capa de datos despite la simplicidad del proyecto.
-    
 
-*IMPORTANTE OJO*
-    La computadora en la que se realizó este test no cumple con los requisitos mínimos para utilizar Docker por lo que el código generado para el despliegue no ha sido testeado ni probado. Espero su comprensión y muchas gracias por darme la oportunidad de formar parte del equipo.
+_IMPORTANTE OJO_
+La computadora en la que se realizó este test no cumple con los requisitos mínimos para utilizar Docker por lo que el código generado para el despliegue no ha sido testeado ni probado. Espero su comprensión y muchas gracias por darme la oportunidad de formar parte del equipo.
